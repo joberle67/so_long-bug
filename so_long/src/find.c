@@ -10,7 +10,7 @@ void	find_player(t_game *game)
 
 	while(game->map.tab[a])
 	{
-		while(game->map.tab[a][i] != '1')
+		while(game->map.tab[a][i] != '\0')
 		{
 			if (game->map.tab[a][i] == 'P')
 			{
@@ -36,7 +36,7 @@ int find_item(char **s)
 	item = 0;
 	while(s[a])
 	{
-		while(s[a][i] != '1')
+		while(s[a][i] != '\0')
 		{
 			if (s[a][i] == 'C')
 				item++;

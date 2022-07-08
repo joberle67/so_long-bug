@@ -12,7 +12,6 @@ int key_action(int key, t_game *game)
 		move_right(game);
 	if (key == DOWN)
 		move_down(game);
-
 	return (0);
 }
 
@@ -26,13 +25,6 @@ int main(int ac, char *av[])
 	game.player.item = find_item(game.map.tab);
 	game.mlx = mlx_init();
 	game.win = mlx_new_window(game.mlx, 1920, 1080, "so_long");
-
 	mlx_hook(game.win, 2, 2, key_action, &game);
-	/*int a = 0;
-	while(game.map.tab[a])
-	{
-		ft_printf("%s", game.map.tab[a]);
-		a++;
-	}*/
 	mlx_loop(game.mlx);
 }
