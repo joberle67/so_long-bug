@@ -32,6 +32,8 @@ typedef struct s_map
 {
 	char **tab;
 	int item;
+	int x;
+	int y;
 	int  fd;
 } t_map;
 
@@ -40,6 +42,7 @@ typedef struct s_game
 {
 	void	*mlx;
 	void	*win;
+	char 	*path;
 	t_map   map;
 	t_img   img;
 	t_player player;
@@ -51,8 +54,13 @@ void move_up(t_game *game);
 void move_down(t_game *game);
 void move_left(t_game *game);
 void move_right(t_game *game);
-int find_item(char **s);
-void	find_player(t_game *game);
+int find_item(char **s, t_game *game);
+int	find_player(t_game *game);
+void error_game(t_game *game);
+int find_exit(char **s);
+int is_ber(char *str);
+int key_action(int key, t_game *game);
+void	init_game(t_game *game, char *av);
 
 
 #endif

@@ -77,7 +77,7 @@ void move_left(t_game *game)
 		ft_printf("%s", game->map.tab[a]);
 		a++;
 	}
-	ft_printf("\nnombre de deplacement : %d\n", game->player.move);
+	ft_printf("\nnombre d'items' : %d\n", game->player.item);
 	return ;
 }
 

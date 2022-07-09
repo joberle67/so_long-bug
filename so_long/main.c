@@ -19,12 +19,7 @@ int main(int ac, char *av[])
 {
 	t_game game;
 
-	game.map.fd = open("map/map.txt", O_RDONLY);
-	game.map.tab = init_tab(game.map.fd);
-	game.player.move = 0;
-	game.player.item = find_item(game.map.tab);
-	game.mlx = mlx_init();
-	game.win = mlx_new_window(game.mlx, 1920, 1080, "so_long");
+	init_game(&game, av[1]);
 	mlx_hook(game.win, 2, 2, key_action, &game);
 	mlx_loop(game.mlx);
 }
