@@ -21,5 +21,6 @@ int main(int ac, char *av[])
 
 	init_game(&game, av[1]);
 	mlx_hook(game.win, 2, 2, key_action, &game);
+	mlx_hook(game.win, 17, 1L << 17, exit_game, &game);
 	mlx_loop(game.mlx);
 }
