@@ -19,6 +19,11 @@ int main(int ac, char *av[])
 {
 	t_game game;
 
+	if (ac != 2)
+	{
+		ft_printf("Usage : ./a.out ./map/[map].ber\n");
+		exit(0);
+	}
 	init_game(&game, av[1]);
 	mlx_hook(game.win, 2, 2, key_action, &game);
 	mlx_hook(game.win, 17, 1L << 17, exit_game, &game);

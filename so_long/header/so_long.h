@@ -43,6 +43,8 @@ typedef struct s_game
 	void	*mlx;
 	void	*win;
 	char 	*path;
+	int *x;
+	int *y;
 	t_map   map;
 	t_img   img;
 	t_player player;
