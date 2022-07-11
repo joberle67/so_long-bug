@@ -10,11 +10,16 @@
 #define RIGHT 2
 #define DOWN 1
 #define ECHAP 53
+// #define TEST "../src/butter.xpm"
+#define IMG_SIZE 20;
 
 
 typedef struct s_img
 {
+	void	*player;
 	void	*img;
+	int width;
+	int height;
 	int     x;
 	int 	y;
 
@@ -22,6 +27,7 @@ typedef struct s_img
 
 typedef struct s_player
 {
+	t_img	start;
 	int item;
 	int move;
 	int exit;
