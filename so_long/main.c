@@ -18,7 +18,6 @@ int key_action(int key, t_game *game)
 int main(int ac, char *av[])
 {
 	t_game game;
-
 	if (ac != 2)
 	{
 		ft_printf("Usage : ./a.out ./map/[map].ber\n");

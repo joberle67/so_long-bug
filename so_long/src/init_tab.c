@@ -18,9 +18,6 @@ char	**init_tab(int fd)
 
 void	init_game(t_game *game, char *av)
 {
-
-	game->img.x = 80;
-	game->img.y = 80;
 	game->path = av;
 	game->map.fd = open(game->path, O_RDONLY);
 	game->player.move = 0;

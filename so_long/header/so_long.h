@@ -14,18 +14,10 @@
 
 typedef struct s_img
 {
-	void	*img_floor;
-	//void	*img_player;
-	//void	*img_exit;
-	//void	*img_wall;
-	//void	*img_item;
+	void	*img;
 	int     x;
 	int 	y;
-	//char	*floor;
-	//char	*player;
-//	char	*exit;
-	//char	*wall;
-	//char	*item;
+
 } t_img;
 
 typedef struct s_player
