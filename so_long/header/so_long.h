@@ -14,9 +14,18 @@
 
 typedef struct s_img
 {
-	void	*img;
+	void	*img_floor;
+	//void	*img_player;
+	//void	*img_exit;
+	//void	*img_wall;
+	//void	*img_item;
 	int     x;
 	int 	y;
+	//char	*floor;
+	//char	*player;
+//	char	*exit;
+	//char	*wall;
+	//char	*item;
 } t_img;
 
 typedef struct s_player
@@ -43,8 +52,8 @@ typedef struct s_game
 	void	*mlx;
 	void	*win;
 	char 	*path;
-	int *x;
-	int *y;
+	int x;
+	int y;
 	t_map   map;
 	t_img   img;
 	t_player player;

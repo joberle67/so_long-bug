@@ -1,9 +1,9 @@
 #include "../header/so_long.h"
 
-char **init_tab(int fd)
+char	**init_tab(int fd)
 {
-	int a;
-	char **str;
+	int		a;
+	char	**str;
 
 	str = malloc(sizeof(char *) * (100));
 	a = -1;
@@ -19,6 +19,8 @@ char **init_tab(int fd)
 void	init_game(t_game *game, char *av)
 {
 
+	game->img.x = 80;
+	game->img.y = 80;
 	game->path = av;
 	game->map.fd = open(game->path, O_RDONLY);
 	game->player.move = 0;
