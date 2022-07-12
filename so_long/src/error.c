@@ -83,7 +83,7 @@ int is_ber(char *str)
 
 void error_game(t_game *game)
 {
-	if (error_map(game->map.tab, game))
+	if (!error_map(game->map.tab, game))
 		error_exit();
 	if (!find_player(game) || !find_item(game->map.tab, game))
 		error_exit();

@@ -34,6 +34,10 @@ typedef struct s_player
 
 typedef struct s_map
 {
+	t_img floor;
+	t_img wall;
+	t_img coin;
+	t_img exit;
 	char **tab;
 	int item;
 	int x;
@@ -50,7 +54,7 @@ typedef struct s_game
 	int x;
 	int y;
 	t_map   map;
-	t_img   img;
+	//t_img   img;
 	t_player player;
 } t_game;
 
