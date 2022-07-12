@@ -26,6 +26,7 @@ void	init_value(t_game *game)
 	game->map.wall.y = 0;
 	game->map.floor.x = 0;
 	game->map.floor.y = 0;
+	game->player.move = 0;
 }
 
 void	init_game(t_game *game, char *av)
@@ -33,10 +34,8 @@ void	init_game(t_game *game, char *av)
 	game->path = av;
 	game->map.fd = open(game->path, O_RDONLY);
 	game->map.tab = init_tab(game->map.fd);
-	init_value(game);
-	game->player.move = 0;
-	find_item(game->map.tab, game);
 	error_game(game);
+	init_value(game);
 	game->mlx = mlx_init();
 	game->win = mlx_new_window(game->mlx, game->map.x * 80, game->map.y * 80, "so_long");
 

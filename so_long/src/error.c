@@ -14,17 +14,21 @@ int error_map(char **str , t_game *game)
 
 	a = 0;
 	i = 0;
+	nb = 0;
+	while (str[a][nb] != '\n' && str[a][nb])
+		nb++;
 	while(str[a])
 	{
-		i = ft_strlen(str[a]);
-		if(i > game->map.x)
+		while (str[a][i] != '\n' && str[a][i])
+			i++;
+		if (i != nb)
 			return (0);
 		game->map.y = a + 1;
-		game->map.x = ft_strlen(str[a]);
+		game->map.x = i;
 		a++;
 		i = 0;
 	}
-	if (game->map.y == game->map.x )
+	if (game->map.y == nb)
 			return (0);
 	return (1);
 }
@@ -83,12 +87,12 @@ int is_ber(char *str)
 
 void error_game(t_game *game)
 {
-	if (!error_map(game->map.tab, game))
+	if (error_map(game->map.tab, game) == 0)
 		error_exit();
-	//if (!find_player(game) || !find_item(game->map.tab, game))
-	//	error_exit();
-	//if (!find_exit(game->map.tab) || !if_not_close(game->map.tab))
-	//	error_exit();
-	//if (is_ber(game->path))
-	//	error_exit();
+	if (!find_player(game) || !find_item(game->map.tab, game))
+		error_exit();
+	if (!find_exit(game->map.tab) || !if_not_close(game->map.tab))
+		error_exit();
+	if (is_ber(game->path))
+		error_exit();
 }

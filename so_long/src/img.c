@@ -84,5 +84,6 @@ int    print_img(t_game *game)
     print_floor(game);
     print_wall(game);
     print_player(game);
+    mlx_string_put(game->mlx, game->win, 10, 10,3093151 , "10");
     return (0);
 }

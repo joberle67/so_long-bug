@@ -16,12 +16,6 @@ void move_up(t_game *game)
 			game->map.tab[game->player.y - 1][game->player.x] = 'P';
 			game->player.move++;
 		}
-		int a = 0;
-	while(game->map.tab[a])
-	{
-		ft_printf("%s", game->map.tab[a]);
-		a++;
-	}
 	ft_printf("\nnombre de deplacement : %d\n", game->player.move);
 	return ;
 }
@@ -42,12 +36,6 @@ void move_down(t_game *game)
 			game->map.tab[game->player.y + 1][game->player.x] = 'P';
 			game->player.move++;
 		}
-		int a = 0;
-	while(game->map.tab[a])
-	{
-		ft_printf("%s", game->map.tab[a]);
-		a++;
-	}
 	ft_printf("\nnombre de deplacement : %d\n", game->player.move);
 	return ;
 }
@@ -69,13 +57,7 @@ void move_left(t_game *game)
 			game->map.tab[game->player.y][game->player.x - 1] = 'P';
 			game->player.move++;
 		}
-		int a = 0;
-	while(game->map.tab[a])
-	{
-		ft_printf("%s", game->map.tab[a]);
-		a++;
-	}
-	ft_printf("\nnombre d'items' : %d\n", game->player.item);
+	ft_printf("\nnombre de deplacement : %d\n", game->player.move);
 	return ;
 }
 
@@ -96,12 +78,6 @@ void move_right(t_game *game)
 			game->map.tab[game->player.y][game->player.x + 1] = 'P';
 			game->player.move++;
 		}
-	int a = 0;
-	while(game->map.tab[a])
-	{
-		ft_printf("%s", game->map.tab[a]);
-		a++;
-	}
 	ft_printf("\nnombre de deplacement : %d\n", game->player.move);
 	return ;
 }

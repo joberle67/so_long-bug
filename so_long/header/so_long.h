@@ -79,7 +79,7 @@ void	init_game(t_game *game, char *av);
 void    load_img(t_game *game);
 void    print_floor(t_game *game);
 void    print_player(t_game *game);
-int    print_img(t_game *game);
+int		print_img(t_game *game);
 
 
 #endif
