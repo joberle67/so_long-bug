@@ -24,7 +24,10 @@ int main(int ac, char *av[])
 		exit(0);
 	}
 	init_game(&game, av[1]);
+	load_img(&game);
+	print_img(&game);
 	mlx_hook(game.win, 2, 2, key_action, &game);
 	mlx_hook(game.win, 17, 1L << 17, exit_game, &game);
+	mlx_loop_hook(game.mlx, print_img, &game);
 	mlx_loop(game.mlx);
 }

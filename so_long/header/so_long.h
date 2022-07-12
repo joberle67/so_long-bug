@@ -10,13 +10,18 @@
 #define RIGHT 2
 #define DOWN 1
 #define ECHAP 53
-// #define TEST "../src/butter.xpm"
+#define PLAYER "img/mario_player.xpm"
+#define FLOOR "img/floor_texture.xpm"
+#define EXIT  "img/exit_texture.xpm"
+#define ITEM  "img/collectible_texture.xpm"
+#define WALL "img/wall_texture.xpm"
 #define IMG_SIZE 20;
 
 
 typedef struct s_img
 {
 	void	*img;
+	int taille;
 	int     x;
 	int 	y;
 
@@ -71,6 +76,10 @@ int find_exit(char **s);
 int is_ber(char *str);
 int key_action(int key, t_game *game);
 void	init_game(t_game *game, char *av);
+void    load_img(t_game *game);
+void    print_floor(t_game *game);
+void    print_player(t_game *game);
+int    print_img(t_game *game);
 
 
 #endif

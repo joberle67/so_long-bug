@@ -10,13 +10,13 @@ int error_map(char **str , t_game *game)
 {
 	int a;
 	int i;
+	int nb;
 
 	a = 0;
 	i = 0;
 	while(str[a])
 	{
-		while(str[a][i])
-			i++;
+		i = ft_strlen(str[a]);
 		if(i > game->map.x)
 			return (0);
 		game->map.y = a + 1;
@@ -85,10 +85,10 @@ void error_game(t_game *game)
 {
 	if (!error_map(game->map.tab, game))
 		error_exit();
-	if (!find_player(game) || !find_item(game->map.tab, game))
-		error_exit();
-	if (!find_exit(game->map.tab) || !if_not_close(game->map.tab))
-		error_exit();
-	if (is_ber(game->path))
-		error_exit();
+	//if (!find_player(game) || !find_item(game->map.tab, game))
+	//	error_exit();
+	//if (!find_exit(game->map.tab) || !if_not_close(game->map.tab))
+	//	error_exit();
+	//if (is_ber(game->path))
+	//	error_exit();
 }

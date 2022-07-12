@@ -3,7 +3,6 @@
 void move_up(t_game *game)
 {
 	find_player(game);
-
 	if (game->map.tab[game->player.y][game->player.x] == 'P')
 		if (game->map.tab[game->player.y - 1][game->player.x] != '1')
 		{
@@ -30,7 +29,6 @@ void move_up(t_game *game)
 void move_down(t_game *game)
 {
 	find_player(game);
-
 	if (game->map.tab[game->player.y][game->player.x] == 'P')
 		if (game->map.tab[game->player.y + 1][game->player.x] != '1')
 		{
