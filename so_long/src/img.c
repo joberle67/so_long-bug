@@ -14,6 +14,8 @@ void    load_img(t_game *game)
        &game->x, &game->y);
     game->map.wall.img = mlx_xpm_file_to_image(game->mlx, WALL, 
        &game->x, &game->y);
+    game->map.die.img = mlx_xpm_file_to_image(game->mlx, DIE, 
+       &game->x, &game->y);
 }
 
 void    print_floor(t_game *game)
@@ -70,7 +72,9 @@ void    print_wall(t_game *game)
             else if (game->map.tab[a][i] == 'C')
                 mlx_put_image_to_window(game->mlx, game->win, game->map.coin.img, 
                     i * 80,  a * 80);
-
+            else if (game->map.tab[a][i] == 'D')
+                mlx_put_image_to_window(game->mlx, game->win, game->map.die.img, 
+                    i * 80,  a * 80);
             i++;
         }
         a++;
@@ -84,6 +88,6 @@ int    print_img(t_game *game)
     print_floor(game);
     print_wall(game);
     print_player(game);
-    mlx_string_put(game->mlx, game->win, 10, 10,3093151 , "10");
+    mlx_string_put(game->mlx, game->win, 10, 10, 255255255 , ft2_itoa(game->player.move));
     return (0);
 }

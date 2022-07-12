@@ -12,11 +12,16 @@ void move_up(t_game *game)
 				exit(0);
 			if (game->map.tab[game->player.y - 1][game->player.x] == 'E' && game->player.item != 0)
 				return ;
+			if (game->map.tab[game->player.y - 1][game->player.x] == 'D')
+			{
+				ft_printf(RED"\nMORT\n"WHT);
+				exit(0);
+			}
 			game->map.tab[game->player.y][game->player.x] = '0';
 			game->map.tab[game->player.y - 1][game->player.x] = 'P';
 			game->player.move++;
 		}
-	ft_printf("\nnombre de deplacement : %d\n", game->player.move);
+	ft_printf(GRN"\nnombre de deplacement : %d\n"WHT, game->player.move);
 	return ;
 }
 
@@ -32,11 +37,16 @@ void move_down(t_game *game)
 				exit(0);
 			if (game->map.tab[game->player.y + 1][game->player.x] == 'E' && game->player.item != 0)
 				return ;
+			if (game->map.tab[game->player.y + 1][game->player.x] == 'D')
+			{
+				ft_printf(RED"\nMORT\n"WHT);
+				exit(0);
+			}
 			game->map.tab[game->player.y][game->player.x] = '0';
 			game->map.tab[game->player.y + 1][game->player.x] = 'P';
 			game->player.move++;
 		}
-	ft_printf("\nnombre de deplacement : %d\n", game->player.move);
+	ft_printf(GRN"\nnombre de deplacement : %d\n"WHT, game->player.move);
 	return ;
 }
 
@@ -53,11 +63,16 @@ void move_left(t_game *game)
 				exit(0);
 			if (game->map.tab[game->player.y][game->player.x - 1] == 'E' && game->player.item != 0)
 				return ;
+			if (game->map.tab[game->player.y][game->player.x - 1] == 'D')
+			{
+				ft_printf(RED"\nMORT\n"WHT);
+				exit(0);
+			}
 			game->map.tab[game->player.y][game->player.x] = '0';
 			game->map.tab[game->player.y][game->player.x - 1] = 'P';
 			game->player.move++;
 		}
-	ft_printf("\nnombre de deplacement : %d\n", game->player.move);
+	ft_printf(GRN"\nnombre de deplacement : %d\n"WHT, game->player.move);
 	return ;
 }
 
@@ -74,11 +89,16 @@ void move_right(t_game *game)
 				exit(0);
 			if (game->map.tab[game->player.y][game->player.x + 1] == 'E' && game->player.item != 0)
 				return ;
+			if (game->map.tab[game->player.y][game->player.x + 1] == 'D')
+			{
+				ft_printf(RED"\nMORT\n"WHT);
+				exit(0);
+			}
 			game->map.tab[game->player.y][game->player.x] = '0';
 			game->map.tab[game->player.y][game->player.x + 1] = 'P';
 			game->player.move++;
 		}
-	ft_printf("\nnombre de deplacement : %d\n", game->player.move);
+	ft_printf(GRN"\nnombre de deplacement : %d\n"WHT, game->player.move);
 	return ;
 }
 

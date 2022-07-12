@@ -15,7 +15,11 @@
 #define EXIT  "img/exit_texture.xpm"
 #define ITEM  "img/collectible_texture.xpm"
 #define WALL "img/wall_texture.xpm"
+#define DIE "img/mario_player.xpm"
 #define IMG_SIZE 20;
+#define GRN "\e[0;32m"
+#define WHT "\e[0;37m"
+#define RED "\e[0;31m"
 
 
 typedef struct s_img
@@ -43,6 +47,7 @@ typedef struct s_map
 	t_img wall;
 	t_img coin;
 	t_img exit;
+	t_img die;
 	char **tab;
 	int item;
 	int x;
