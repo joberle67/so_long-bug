@@ -10,7 +10,7 @@
 #define RIGHT 2
 #define DOWN 1
 #define ECHAP 53
-#define PLAYER "img/mario_player.xpm"
+#define PLAYER "img/butter.xpm"
 #define FLOOR "img/floor_texture.xpm"
 #define EXIT  "img/exit_texture.xpm"
 #define ITEM  "img/collectible_texture.xpm"
