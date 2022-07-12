@@ -16,10 +16,7 @@
 
 typedef struct s_img
 {
-	void	*player;
 	void	*img;
-	int width;
-	int height;
 	int     x;
 	int 	y;
 
@@ -27,7 +24,7 @@ typedef struct s_img
 
 typedef struct s_player
 {
-	t_img	start;
+	t_img	img;
 	int item;
 	int move;
 	int exit;

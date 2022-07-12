@@ -1,6 +1,6 @@
 #include "../header/so_long.h"
 
-/*void	put_img(t_game *game)
+void    load_img(t_game *game)
 {
-
-}*/
+    
+}

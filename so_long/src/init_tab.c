@@ -20,8 +20,8 @@ void	init_game(t_game *game, char *av)
 {
 	game->path = av;
 	game->map.fd = open(game->path, O_RDONLY);
-	game->player.move = 0;
 	game->map.tab = init_tab(game->map.fd);
+	game->player.move = 0;
 	find_item(game->map.tab, game);
 	error_game(game);
 	game->mlx = mlx_init();
