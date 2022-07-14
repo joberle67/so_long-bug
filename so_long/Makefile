@@ -38,6 +38,7 @@ clean:
 		@echo $(FONT_COLOR_RED)[OBJECT DELETED] $(FONT_COLOR_DEFAULT)
 
 fclean: 
-		@$(RM) $(OBJ) $(NAME) && $(LIBFT_FCLEAN) && $(PRINTF_FCLEAN)
+		@$(RM) $(NAME) && $(LIBFT_FCLEAN) && $(PRINTF_FCLEAN)
 		@echo $(FONT_COLOR_RED)[so_long DELETED] $(FONT_COLOR_DEFAULT)
 
+re: fclean all
