@@ -1,20 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   exit_game.c                                        :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joberle <joberle@student.42.fr>            +#+  +:+       +#+        */
+/*   By: joberle <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/13 14:32:23 by joberle           #+#    #+#             */
-/*   Updated: 2022/07/14 14:15:48 by joberle          ###   ########.fr       */
+/*   Created: 2022/02/22 12:33:25 by joberle           #+#    #+#             */
+/*   Updated: 2022/02/22 12:33:43 by joberle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../header/so_long.h"
+#include "libft.h"
 
-int	exit_game(t_game *game)
+void	*ft_memset(void *b, int c, size_t len)
 {
-	mlx_destroy_window(game->mlx, game->win);
-	free(game->map.tab);
-	exit(0);
+	size_t	a;
+
+	a = 0;
+	while (a < len)
+	{
+		((unsigned char *)b)[a] = c;
+		a++;
+	}
+	return (b);
 }

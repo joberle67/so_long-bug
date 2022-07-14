@@ -1,20 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   exit_game.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joberle <joberle@student.42.fr>            +#+  +:+       +#+        */
+/*   By: joberle <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/13 14:32:23 by joberle           #+#    #+#             */
-/*   Updated: 2022/07/14 14:15:48 by joberle          ###   ########.fr       */
+/*   Created: 2022/02/27 15:22:21 by joberle           #+#    #+#             */
+/*   Updated: 2022/02/27 15:22:25 by joberle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../header/so_long.h"
+#include "libft.h"
 
-int	exit_game(t_game *game)
+char	*ft_strrchr(const char *s, int c)
 {
-	mlx_destroy_window(game->mlx, game->win);
-	free(game->map.tab);
-	exit(0);
+	int		a;
+	int		nb;
+
+	a = -1;
+	nb = -1;
+	while (s[++a])
+		if (s[a] == c)
+			nb = a;
+	if (s[a] == c)
+		nb = a;
+	if (nb > -1)
+		return (((char *)s) + nb);
+	return (NULL);
 }

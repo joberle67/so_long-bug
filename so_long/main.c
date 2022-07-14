@@ -1,9 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: joberle <joberle@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/07/13 14:09:08 by joberle           #+#    #+#             */
+/*   Updated: 2022/07/14 13:54:39 by joberle          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "header/so_long.h"
 
-int key_action(int key, t_game *game)
+int	key_action(int key, t_game *game)
 {
 	if (key == ECHAP)
-	     exit_game(game);
+		exit_game(game);
 	if (key == UP)
 		move_up(game);
 	if (key == LEFT)
@@ -15,9 +27,10 @@ int key_action(int key, t_game *game)
 	return (0);
 }
 
-int main(int ac, char *av[])
+int	main(int ac, char *av[])
 {
-	t_game game;
+	t_game	game;
+
 	if (ac != 2)
 	{
 		ft_printf("Usage : ./a.out ./map/[map].ber\n");

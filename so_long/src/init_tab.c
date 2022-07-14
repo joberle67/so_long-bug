@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   init_tab.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: joberle <joberle@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/07/13 14:32:08 by joberle           #+#    #+#             */
+/*   Updated: 2022/07/14 14:14:12 by joberle          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../header/so_long.h"
 
 char	**init_tab(int fd)
@@ -37,6 +49,6 @@ void	init_game(t_game *game, char *av)
 	error_game(game);
 	init_value(game);
 	game->mlx = mlx_init();
-	game->win = mlx_new_window(game->mlx, game->map.x * 80, game->map.y * 80, "so_long");
-
+	game->win = mlx_new_window(game->mlx, game->map.x * 80,
+			game->map.y * 80, "so_long");
 }

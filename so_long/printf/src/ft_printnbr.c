@@ -1,20 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   exit_game.c                                        :+:      :+:    :+:   */
+/*   ft_printnbr.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joberle <joberle@student.42.fr>            +#+  +:+       +#+        */
+/*   By: joberle <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/13 14:32:23 by joberle           #+#    #+#             */
-/*   Updated: 2022/07/14 14:15:48 by joberle          ###   ########.fr       */
+/*   Created: 2022/03/18 13:47:59 by joberle           #+#    #+#             */
+/*   Updated: 2022/03/18 13:56:16 by joberle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../header/so_long.h"
+#include "../header/ft_printf.h"
 
-int	exit_game(t_game *game)
+int	ft_printnbr(int n)
 {
-	mlx_destroy_window(game->mlx, game->win);
-	free(game->map.tab);
-	exit(0);
+	int		len;
+	char	*str;
+
+	str = ft2_itoa(n);
+	len = ft_printstr(str);
+	free(str);
+	return (len);
 }

@@ -1,20 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   exit_game.c                                        :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joberle <joberle@student.42.fr>            +#+  +:+       +#+        */
+/*   By: joberle <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/13 14:32:23 by joberle           #+#    #+#             */
-/*   Updated: 2022/07/14 14:15:48 by joberle          ###   ########.fr       */
+/*   Created: 2022/02/22 10:53:25 by joberle           #+#    #+#             */
+/*   Updated: 2022/02/22 10:53:40 by joberle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../header/so_long.h"
-
-int	exit_game(t_game *game)
+int	ft_isdigit(int c)
 {
-	mlx_destroy_window(game->mlx, game->win);
-	free(game->map.tab);
-	exit(0);
+	if (c >= 48 && c <= 57)
+		return (1);
+	return (0);
 }
